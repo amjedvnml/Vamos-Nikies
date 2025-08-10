@@ -36,7 +36,7 @@ const Login = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Close Bar */}
-      <div className="bg-white shadow-md">
+      <div className="bg-black text-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img src="/nikeWhite.svg" alt="Nike Logo" className="w-8 h-8" />
@@ -44,10 +44,10 @@ const Login = () => {
           </div>
           <button
             onClick={handleClose}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="p-2 rounded-full transition-colors"
             title="Close and go back"
           >
-            <i className="fas fa-times text-xl text-gray-600 hover:text-black"></i>
+            <i className="fas fa-times text-xl text-gray-100"></i>
           </button>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Login = () => {
       {/* Login Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="max-w-md mx-auto rounded-lg shadow-lg overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-black to-gray-900 text-white p-6 text-center">
               <div className="flex items-center justify-center space-x-3 mb-4">
