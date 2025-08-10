@@ -2,15 +2,28 @@ import React, { useState } from 'react'
 import Navbar from '../../components/navbar/navbar.jsx';
 import Button from '../../components/button/button.jsx';
 import Footer from '../../components/footer/footer.jsx';
+import Modal from '../../components/modal/modal.jsx';
 import products from '../../assets/product.js';
 
 const Product = () => {
-  const [searchTerm, setSearchTerm] = useState("");  
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   // Filter products by search term
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleViewDetails = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -57,7 +70,10 @@ const Product = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-black">{product.price}</span>
-                    <Button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
+                    <Button 
+                      className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors"
+                      onClick={() => handleViewDetails(product)}
+                    >
                       View Details
                     </Button>
                   </div>
@@ -89,6 +105,13 @@ const Product = () => {
       </section>
       {/* Footer Section */}
       <Footer />
+      
+      {/* Modal */}
+      <Modal 
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        product={selectedProduct}
+      />
     </div>
   )
 }
