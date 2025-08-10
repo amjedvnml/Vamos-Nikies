@@ -51,6 +51,7 @@ const SignIn = () => {
     <div className="bg-gray-100 min-h-screen">
       {/* Close Bar */}
       <div className="bg-white shadow-md">
+        <div className="bg-black text-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img src="/nikeWhite.svg" alt="Nike Logo" className="w-8 h-8" />
@@ -58,10 +59,10 @@ const SignIn = () => {
           </div>
           <button
             onClick={handleClose}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="p-2 rounded-full transition-colors"
             title="Close and go back"
           >
-            <i className="fas fa-times text-xl text-gray-600 hover:text-black"></i>
+            <i className="fas fa-times text-xl text-gray-100"></i>
           </button>
         </div>
       </div>
@@ -294,7 +295,8 @@ const SignIn = () => {
         </div>
       </section>
     </div>
+    </div>
   )
 }
 
-export default SignIn
+export default SignIn;
