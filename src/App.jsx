@@ -5,7 +5,8 @@ import Product from './pages/product/product.jsx'
 import Store from './pages/store/store.jsx'
 import About from './pages/about/about.jsx'
 import Contact from './pages/contact/contact.jsx'
-import Login from './pages/logIn/login.jsx'
+// NOTE: Case-sensitive import corrected for Vercel/Linux builds. Filename is logIn.jsx (capital I)
+import Login from './pages/logIn/logIn.jsx'
 import SignIn from './pages/signIn/signIn.jsx'
 
 
