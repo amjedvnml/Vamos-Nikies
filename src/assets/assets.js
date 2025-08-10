@@ -3,7 +3,7 @@ import AirJordan from './airjordan1.avif'
 import AirForce1 from './airforce1.jpg'
 import FootballBoots from './boots.avif'
 import DriFit from './drifit.jpg'
-import DunkLowRetro from './dunkLowretro.avif'
+import DunkLowRetro from './dunklowretro.avif'
 import Vaporfly from './vaporfly.avif'
 import HaywardBackpack from './HaywardBag.webp'
 
